@@ -1,0 +1,39 @@
+version: "2"
+services:
+  receiver:
+    image: receiver
+    container_name: receiver
+    build: 
+      context: receiver-container/
+    depends_on:
+      - filter
+    volumes:
+      - sensor-data:/data/:rw
+
+  filter:
+    image: filter
+    container_name: filter
+    build: 
+      context: filter-container/
+    expose:
+      - “8010”
+    depends_on:
+      - process
+    volumes:
+      - sensor-data:/data/:rw
+
+  process:
+    image: process
+    container_name: process
+    build: 
+      context: process-container/
+    expose:
+      - “8020"
+    volumes:
+      - sensor-data:/data/:rw
+
+volumes:
+  sensor-data:
+
+
+
