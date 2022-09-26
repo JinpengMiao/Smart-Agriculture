@@ -1,0 +1,7 @@
+FROM python:latest
+
+ADD receiver.py /receiver/
+
+WORKDIR /receiver/
+
+CMD [ "python3", "./receiver.py"]
