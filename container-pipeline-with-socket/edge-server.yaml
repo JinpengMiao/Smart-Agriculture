@@ -4,7 +4,7 @@ services:
     image: receiver
     container_name: receiver
     build: 
-      context: receiver/
+      context: receiver-container/
     depends_on:
       - filter
 
@@ -12,7 +12,7 @@ services:
     image: filter
     container_name: filter
     build: 
-      context: filter/
+      context: filter-container/
     expose:
       - “8010”
     depends_on:
@@ -22,7 +22,7 @@ services:
     image: process
     container_name: process
     build: 
-      context: process/
+      context: process-container/
     expose:
       - “8020"
 
