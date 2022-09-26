@@ -1,0 +1,7 @@
+FROM python:latest
+
+ADD filter.py /filter/
+
+WORKDIR /filter/
+
+CMD [ "python3", "./filter.py"]
