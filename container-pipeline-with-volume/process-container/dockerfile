@@ -1,0 +1,7 @@
+FROM python:latest
+
+ADD process.py /process/
+
+WORKDIR /process/
+
+CMD [ "python3", "./process.py"]
