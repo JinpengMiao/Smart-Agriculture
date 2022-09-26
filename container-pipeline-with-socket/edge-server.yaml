@@ -1,0 +1,30 @@
+version: "1"
+services:
+  receiver:
+    image: receiver
+    container_name: receiver
+    build: 
+      context: receiver/
+    depends_on:
+      - filter
+
+  filter:
+    image: filter
+    container_name: filter
+    build: 
+      context: filter/
+    expose:
+      - “8010”
+    depends_on:
+      - process
+
+  process:
+    image: process
+    container_name: process
+    build: 
+      context: process/
+    expose:
+      - “8020"
+
+
+
