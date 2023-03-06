@@ -1,10 +1,10 @@
 FROM python:latest
 
-ADD layout1_predict.py /predict/
+ADD layoutA_predict.py /predict/
 
-ADD  layout1 /predict/layout1/
+ADD  layoutA /predict/layoutA/
 
 WORKDIR /predict/
 
-CMD [ "python3", "./layout1_predict.py"]
+CMD [ "python3", "./layoutA_predict.py"]
 
