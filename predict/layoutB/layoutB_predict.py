@@ -657,8 +657,8 @@ def locate_and_predict(cur_side, cur_sensor, cur_time, next_time, filename, coun
 #         cur_time = float(row[2])
 #         locate_and_predict(cur_side, cur_sensor, cur_time)
 c = 0  
-# for filename in os.listdir("/Users/jinpeng/Workspace/Research/Smart Agriculture/smart_agriculture_edge_server/simulate_prediction/layout4/"):
-for filename in os.listdir("/predict/layout4/"):
+# for filename in os.listdir("/predict/layoutB/"):
+for filename in os.listdir("/predict/layoutB/"):
     if filename.endswith('.csv'):
         f = open("/predict/layout4/" + filename, "r")
         ff = csv.reader(f)
