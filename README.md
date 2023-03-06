@@ -1,6 +1,15 @@
 # Smart-Agriculture
 Source code for our research project on smart agriculture
 
+## Algorithms for prediction of animals' future locations
+'predict' folder contains the code, data, and dockerfile for 3 proposed layouts.
+The algorithms are deployed on edge server with docker containers.
+- `cd layout[X]`
+- `docker build -t layout[X] .`
+- `docker run -d layout[X]`
+- `docker ps -a`
+- `docker logs [CONTAINER ID]`
+
 
 ## Communication between containers via socket
 All data is transferred between containers via socket stream.  
