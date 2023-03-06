@@ -438,10 +438,10 @@ def locate_and_predict(cur_side, cur_sensor, cur_time, next_time, filename, coun
         #     cur_time = float(sensor_data.split('-')[2])
         #     locate_and_predict(cur_side, cur_sensor, cur_time)
 c = 0      
-# for filename in os.listdir("/Users/jinpeng/Workspace/Research/Smart Agriculture/smart_agriculture_edge_server/simulate_prediction/layout3/"):
-for filename in os.listdir("/predict/layout3/"):
+# for filename in os.listdir("/predict/layoutC/"):
+for filename in os.listdir("/predict/layoutC/"):
     if filename.endswith('.csv'):
-        f = open("/predict/layout3/" + filename, "r")
+        f = open("/predict/layoutC/" + filename, "r")
         ff = csv.reader(f)
         row = next(ff)
         c += 1
