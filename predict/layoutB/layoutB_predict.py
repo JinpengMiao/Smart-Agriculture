@@ -660,7 +660,7 @@ c = 0
 # for filename in os.listdir("/predict/layoutB/"):
 for filename in os.listdir("/predict/layoutB/"):
     if filename.endswith('.csv'):
-        f = open("/predict/layout4/" + filename, "r")
+        f = open("/predict/layoutB/" + filename, "r")
         ff = csv.reader(f)
         row = next(ff)
         c += 1
