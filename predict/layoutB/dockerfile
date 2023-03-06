@@ -1,0 +1,10 @@
+FROM python:latest
+
+ADD layout4_predict.py /predict/
+
+ADD  layout4 /predict/layout4/
+
+WORKDIR /predict/
+
+CMD [ "python3", "./layout4_predict.py"]
+
